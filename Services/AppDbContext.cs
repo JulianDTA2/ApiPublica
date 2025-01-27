@@ -14,7 +14,7 @@ namespace SPJApiPublica.Services
 
         protected override void OnConfiguring(DbContextOptionsBuilder optionsBuilder)
         {
-            optionsBuilder.UseSqlite("Data Source=cars.db");
+            optionsBuilder.UseSqlite("Database=SPJ_ProyectoMVC");
         }
     }
 }

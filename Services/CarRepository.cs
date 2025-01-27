@@ -18,7 +18,6 @@ namespace SPJApiPublica.Services
         public CarRepository()
         {
             _context = new AppDbContext();
-            _context.Database.EnsureCreated();
         }
 
         public async Task AddCarAsync(Car car)
