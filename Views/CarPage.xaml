@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="SPJApiPublica.Views.CarPage"
+             Title="Cars">
+    <StackLayout>
+        <Button Text="Load Cars" Command="{Binding LoadCarsCommand}" />
+        <Button Text="Add Car" Command="{Binding AddCarCommand}" />
+        <Button Text="Update Car" Command="{Binding UpdateCarCommand}" />
+        <Button Text="Delete Car" Command="{Binding DeleteCarCommand}" />
+
+        <ListView ItemsSource="{Binding Cars}">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Text="{Binding Make}" Detail="{Binding Model}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+    </StackLayout>
+</ContentPage>
